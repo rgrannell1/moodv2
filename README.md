@@ -9,6 +9,8 @@ Record your mood & energy privately.
 
 ## Usage
 
+Using [rs](https://github.com/rgrannell1/rs)
+
 ```
 rs
 rs run

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,13 +7,11 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script type="module" src='ts/index.ts'></script>
   <style>
-    html * {
-      margin: 0;
-      padding: 0;
-    }
+    /* html reset */
+    html * { margin: 0; padding: 0; }
   </style>
 </head>
 <body>
-  <mood-app></mood-app>
+  <mood-app tgt="http://localhost:5984/mood-db"></mood-app>
 </body>
 </html>

@@ -1,6 +1,6 @@
 import { css, html, LitElement } from "lit";
 
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { MoodController } from "../service.ts";
 
 import "./mood-input.ts";
@@ -31,16 +31,17 @@ export class MoodApp extends LitElement {
   }
   `;
 
+  @property({type: String, attribute: true})
+  tgt = ''
+
   service: MoodController;
   constructor() {
     super();
 
-    const REMOTE_DB = "http://localhost:5984/mood-db";
-
     this.service = new MoodController(this);
-    this.service.sync(REMOTE_DB)
+    this.service.sync(this.tgt)
       .on("change", (change) => {
-        console.debug(`change ${REMOTE_DB}`, change);
+        console.debug(`change ${this.tgt}`, change);
       })
       .on("error", (err) => {
         console.error("error during sync", err);
