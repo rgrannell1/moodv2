@@ -1,0 +1,9 @@
+
+[build]
+  command = "yarn run build"
+  functions = "functions"
+  publish = "dist"
+
+[dev]
+  framework = "parcel"
+  command = "npm run dev"
