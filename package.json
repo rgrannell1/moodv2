@@ -4,6 +4,7 @@
   "license": "MIT",
   "dependencies": {
     "@swc/helpers": "^0.4.3",
+    "events": "^3.3.0",
     "idb-keyval": "^6.2.0",
     "lit": "^2.2.6",
     "parcel": "^2.6.1",
