@@ -32,7 +32,7 @@ export class MoodApp extends LitElement {
   `;
 
   @property({type: String, attribute: true})
-  tgt = ''
+  tgt: string = 'http://localhost:5984/mood-db'
 
   service: MoodController;
   constructor() {

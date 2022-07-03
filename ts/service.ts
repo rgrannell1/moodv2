@@ -16,6 +16,7 @@ export class MoodController implements ReactiveController {
   }
 
   sync(remote: string) {
+    console.log(`setting up sync with ${remote}`)
     return this.db.sync(remote, {
       live: true,
       retry: true
